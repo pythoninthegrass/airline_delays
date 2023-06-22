@@ -52,6 +52,12 @@ Available years:
 Enter a year: 2004
 Average percentage of delayed flights: 7.93%
 Average minutes delayed: 42.59 minutes
+
+# force quit script if necessary
+ctrl-c              # ^C
+
+# deactivate virtual environment
+deactivate
 ```
 
 ## Further Reading

@@ -3,7 +3,21 @@
 import json
 import re
 import requests
+import signal
+import sys
+import threading
 from pathlib import Path
+
+
+def signal_handler(sig, frame):
+    """Handles SIGINT signal and exits program."""
+    print("\nGoodbye!")
+    sys.exit(0)
+
+
+# avoid KeyboardInterrupt error without using try/except
+signal.signal(signal.SIGINT, signal_handler)
+forever = threading.Event()
 
 # download airlines.json
 url = "https://think.cs.vt.edu/corgis/datasets/json/airlines/airlines.json"
