@@ -30,10 +30,10 @@ airport_codes = set()
 # sort airport codes
 airport_codes = sorted(airport_codes)
 
-# get all available years
+# initialize years set
 years = set()
 
-# add all years to set
+# get all available years and add to set
 [years.add(airport['Time']['Year']) for airport in output]
 
 # sort years
