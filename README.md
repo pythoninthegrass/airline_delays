@@ -3,11 +3,18 @@
 Calculate the percentage of security-caused flight delays for the United States by calendar year (e.g., 2004).
 
 ## Setup
+### asdf
 * Install [asdf](https://asdf-vm.com/guide/getting-started.html)
 * Install python plugin for asdf
   * `asdf plugin add python`
 * Install poetry plugin for asdf
   * `asdf plugin add poetry`
+
+### poetry
+* Install poetry
+  * `asdf install poetry 1.4.2`
+
+### python
 * Install python 3.11.4
   * `asdf install python 3.11.4`
 * Install virtual environment
