@@ -64,8 +64,9 @@ year = input("Enter a year: ")
 if year == "":
     year = years[-1]
     print(f"Using default year: {year}")
-elif not re.match(r"^\d{4}$", year):
-    year = input("Enter a valid year: ")
+elif not re.match(r"^20(0[3-9]|1[0-6])$", year):
+    while not re.match(r"^20(0[3-9]|1[0-6])$", year):
+        year = input("Enter a valid year from 2003 to 2016: ")
 
 # filter json by Airport > Time > Year > <2004>
 filtered_output = [airport for airport in output if airport['Time']['Year'] == int(year)]
